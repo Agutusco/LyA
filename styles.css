@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 250, 250);
+}
+
+.nav1{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+nav img{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+
+
+.ul1{
+    text-decoration: none;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.ul1 li{
+    padding: 8px;
+    margin: 10px;
+}
+
+
+.ul-container{
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-start;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+.ul-container p{
+    padding: 20px;
+    width:180px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.ul-container p:not(:last-child) {
+    border-right: 1px solid rgb(107, 107, 107);
+}
+
+
+.carousel-container {
+    width: 100%;
+    height: 600px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute; 
+}
+
+.carousel-inner img:first-child {
+    opacity: 1;
+}
+
+
+.btn-carousel{
+    width: 120px;
+    height: 60px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    border-radius: 13px;
+    background-color: #adb337;
+    border: none 1px none 1px solid;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/* Publicidad */
+.publicidad{
+    width: 100%;
+    height: 110px;
+    background-color: red;
+}
+
+.publicidad p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+/* Contacto */
+.seccion-contacto {
+    display: grid;
+    grid-template-areas: 
+    "contacto tasaciones";
+    margin-top: 30px;
+}
+
+
+.form-container-contacto{
+    grid-area: contacto;
+}
+
+.form-container-tasaciones{
+    grid-area: tasaciones;
+}
+
+.form-container-contacto i,
+.form-container-tasaciones i {
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+}
+
+.form-container-contacto h2,
+.form-container-tasaciones h2{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+}
+
+
+.form-container-contacto,
+.form-container-tasaciones {
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.form-container-contacto input,textarea,
+.form-container-tasaciones input,textarea {
+    padding: 8px;
+    margin: 8px;
+    width: 100%;
+}
+
+form{
+    width: 200px;
+}
+
+form div{
+    margin: 1px;
+}
+
+
+/* Pie de pagina */
+
+footer{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(128, 128, 128);
+}
+
+footer iframe{
+    height: 400px;
+    width: 400px;
+    margin: 12px;
+}
