@@ -1,3 +1,4 @@
+/* Generales */
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +9,15 @@ body{
     background-color: rgb(255, 250, 250);
 }
 
+.ocultar{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}
+
+/* Nav */
 .nav1{
     width: 100%;
     height: 80px;
@@ -37,6 +47,10 @@ nav img{
     margin: 10px;
 }
 
+.ul1 i{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+}
 
 .ul-container{
     width: 360px;
@@ -53,6 +67,7 @@ nav img{
     width:180px;
     font-size: 20px;
     text-align: center;
+    font-family: "Roboto",sans-serif;
 }
 
 .ul-container p:not(:last-child) {
@@ -95,19 +110,21 @@ nav img{
     top:50%;
     left: 50%;
     border-radius: 13px;
-    background-color: #adb337;
+    background-color: #d1dbe0;
+
     border: none 1px none 1px solid;
 }
 
 a{
     text-decoration: none;
     color: black;
+    font-size: 16px;
 }
 /* Publicidad */
 .publicidad{
     width: 100%;
     height: 110px;
-    background-color: red;
+    background-color: #d1dbe0;
 }
 
 .publicidad p{
@@ -125,6 +142,7 @@ a{
     "contacto tasaciones";
     margin-top: 30px;
 }
+
 
 
 .form-container-contacto{
@@ -165,8 +183,14 @@ a{
     width: 100%;
 }
 
+
 form{
     width: 200px;
+}
+
+h2{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
 }
 
 form div{
@@ -179,14 +203,63 @@ form div{
 footer{
     margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    background-color: rgb(128, 128, 128);
+    grid-template-columns: repeat(3,1fr);
+    /* background-color: rgb(128, 128, 128); */
+    background-color: #d1dbe0;
 }
 
 footer iframe{
     height: 400px;
     width: 400px;
     margin: 12px;
+}
+
+.div-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    height: 400px;
+    font-size: 16px;
+}
+
+.ul-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    margin: 15px;
+    list-style-type: none;
+}
+
+.div-contacto h3, .ubicacion h3{
+    display: flex;
+    justify-content: center;
+}
+
+.ubicacion{
+    margin: 15px;
+    height: 400px;
+}
+.ubicacion p{
+    margin: 15px;
+}
+
+.div-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.div-info div{
+    width: 400px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.div-info div p{
+    padding: 10px;
 }
 
 
