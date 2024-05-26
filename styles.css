@@ -71,7 +71,7 @@ nav img{
 }
 
 .ul-container p:not(:last-child) {
-    border-right: 1px solid rgb(107, 107, 107);
+    border-right: 1px solid rgb(201, 199, 199);
 }
 
 
@@ -136,23 +136,31 @@ a{
 
 
 /* Contacto */
-.seccion-contacto {
+/* .seccion-contacto {
     display: grid;
     grid-template-areas: 
     "contacto tasaciones";
     margin-top: 30px;
+} */
+
+.seccion-contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    padding: 30px;
+    justify-content: space-around;
 }
 
-
-
-.form-container-contacto{
+/* .form-container-contacto{
     grid-area: contacto;
 }
 
 .form-container-tasaciones{
     grid-area: tasaciones;
 }
-
+*/
 .form-container-contacto i,
 .form-container-tasaciones i {
     display: flex;
@@ -165,14 +173,14 @@ a{
     display: flex;
     justify-content: center;
     text-align: start;
-}
+} 
 
 
 .form-container-contacto,
 .form-container-tasaciones {
     display: flex;
     align-items: center;
-    grid-gap: 30px;
+    cursor: pointer;
     justify-content: center;
 }
 
@@ -265,7 +273,7 @@ footer iframe{
 
 
 /* queries */
-@media screen and (max-width:800px) {
+@media only screen and (max-width:600px) {
     *{
         padding: 0;
         margin: 0;
@@ -292,12 +300,24 @@ footer iframe{
 
     .seccion-contacto{
         display: grid;
-        grid-template-rows: repeat(2, fr);  /* Two rows for vertical stacking */
+        grid-template-columns: 1,1fr;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
     }
-    .form-container-contacto div,
-    .form-container-tasaciones div {
-      display: flex; /* Maintain flexbox for icon and title alignment */
-      justify-content: center;
-      align-items: center;
+
+    #icono1 i, #icono1 h2,
+    #icono2 i, #icono2 h2
+    {
+        display: none;
+    }
+    .form-contacto, .form-tasaciones{
+        display: block;
+    }
+    .titulo-form{
+        display: block;
+        text-align: center;
+        padding: 15px;
+        margin: 30px;
     }
 }

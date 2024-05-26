@@ -11,7 +11,7 @@ function changeImage() {
   images[currentImageIndex].style.opacity = 1;
 }
 
-setInterval(changeImage, 3000);
+setInterval(changeImage, 5000);
 
 
 const contactoBtn = document.getElementById("icono1")
