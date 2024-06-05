@@ -28,3 +28,11 @@ tasacionesBtn.addEventListener("click",() => {
 } )
 
 
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.ul-container');
+
+menuToggle.addEventListener('click', function() {
+  this.classList.toggle('active');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});

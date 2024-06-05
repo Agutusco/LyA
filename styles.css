@@ -62,7 +62,7 @@ nav img{
     justify-content: space-between;
 }
 
-.ul-container p{
+.ul-container li{
     padding: 20px;
     width:180px;
     font-size: 20px;
@@ -70,11 +70,28 @@ nav img{
     font-family: "Roboto",sans-serif;
 }
 
-.ul-container p:not(:last-child) {
+.ul-container li:not(:last-child) {
     border-right: 1px solid rgb(201, 199, 199);
 }
 
+/* Menu Hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
 
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* CAROUSEL */
 .carousel-container {
     width: 100%;
     height: 600px; 
@@ -136,12 +153,6 @@ a{
 
 
 /* Contacto */
-/* .seccion-contacto {
-    display: grid;
-    grid-template-areas: 
-    "contacto tasaciones";
-    margin-top: 30px;
-} */
 
 .seccion-contacto{
     display: flex;
@@ -153,13 +164,7 @@ a{
     justify-content: space-around;
 }
 
-/* .form-container-contacto{
-    grid-area: contacto;
-}
 
-.form-container-tasaciones{
-    grid-area: tasaciones;
-}
 */
 .form-container-contacto i,
 .form-container-tasaciones i {
@@ -212,7 +217,6 @@ footer{
     margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    /* background-color: rgb(128, 128, 128); */
     background-color: #d1dbe0;
 }
 
@@ -273,7 +277,7 @@ footer iframe{
 
 
 /* queries */
-@media only screen and (max-width:600px) {
+@media (max-width:768px) {
     *{
         padding: 0;
         margin: 0;
@@ -281,16 +285,12 @@ footer iframe{
     }
     body{
         display: grid;
-        grid-template-columns: repeat(1,fr);
+        grid-template-columns: 1,1fr;
         width: 100%;
     }
     
     .nav1, nav img{
         display: none;
-    }
-    
-    .ul-container{
-        margin: 12px;
     }
 
     .publicidad{
@@ -319,5 +319,40 @@ footer iframe{
         text-align: center;
         padding: 15px;
         margin: 30px;
+    }
+
+    .ul-container {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .ul-container li:not(:last-child) {
+        border-bottom: 1px solid rgb(201, 199, 199);
+        border-right: none;
+    }
+
+    .ul-container li {
+    margin: 10px 0;
+    }
+
+    .menu-toggle {
+    display: block;
+    margin: 10px;
+    float: left;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
     }
 }
