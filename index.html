@@ -55,7 +55,7 @@
                 <h2>Contacto</h2>
             </div>
             <div class="form-contacto ocultar" id="contactoForm">
-                <form action="">
+                <form action="" >
                     <p class="titulo-form ocultar">Formulario de Contacto</p>
                     <div>
                         <input type="text" name="nombre" id="" placeholder="Nombre">
@@ -73,7 +73,7 @@
                         <textarea name="mensaje" id="" placeholder="Mensaje"></textarea>
                     </div>
                     <div>
-                        <input type="submit" value="Enviar">
+                        <input type="submit" name="submit" value="Enviar">
                     </div>
                 </form>
             </div>
@@ -84,22 +84,22 @@
                 <h2>Tasaciones</h2>
             </div>
             <div id="tasacionesForm" class="ocultar form-tasaciones">
-                <form action="">
+                <form method="post" id="tasaciones-form" >
                     <p class="titulo-form ocultar">Formulario de Tasaciones</p>
                     <div>
-                        <input type="text" name="nombre" id="" placeholder="Nombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                     </div>
                     <div>
-                        <input type="tel" name="tel" id="" placeholder="Teléfono">
+                        <input type="tel" name="tel" id="tel" placeholder="Teléfono" required>
                     </div>
                     <div>
-                        <input type="tel" name="" id="" placeholder="Celular">
+                        <input type="tel" name="cel" id="cel" placeholder="Celular" required>
                     </div>
                     <div>
-                        <input type="email" name="" id="" placeholder="E-mail">
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
                     </div>
                     <div>
-                        <textarea name="mensaje" id="" placeholder="Mensaje"></textarea>
+                        <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
                     </div>
                     <div>
                         <input type="submit" value="Enviar">
