@@ -135,6 +135,7 @@ a{
     color: black;
     font-size: 16px;
 }
+
 /* Publicidad */
 .publicidad{
     width: 100%;
@@ -283,12 +284,23 @@ footer iframe{
     }
     body{
         display: grid;
-        grid-template-columns: 1,1fr;
+        min-width: none;
+        /* grid-template-columns: 1,1fr; */
         width: 100%;
     }
     
+    html{
+        width: 100%;
+    }
+
     .nav1, nav img{
         display: none;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        width: auto;
     }
 
     .publicidad{
@@ -302,6 +314,7 @@ footer iframe{
         display: flex;
         flex-direction: column;
         margin: 15px;
+        align-items: center;
     }
 
     #icono1 i, #icono1 h2,
